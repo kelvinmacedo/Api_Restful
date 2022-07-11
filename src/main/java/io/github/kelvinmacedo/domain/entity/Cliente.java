@@ -1,17 +1,18 @@
 package io.github.kelvinmacedo.domain.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.Entity;
-import java.util.UUID;
-@Entity
-@ToString
+
 @Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cliente {
 
-    private UUID id;
+    private Integer id;
     private String nome;
+
 
 }
