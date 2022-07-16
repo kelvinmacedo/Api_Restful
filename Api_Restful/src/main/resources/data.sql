@@ -1,5 +1,5 @@
 create table cliente (
-    id integer primary key auto_increment,
+    id varchar (39) primary key,
     nome varchar(100)
 );
 
