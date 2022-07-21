@@ -1,16 +1,14 @@
 package io.github.kelvinmacedo.repository;
 
 import io.github.kelvinmacedo.domain.entity.Cliente;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
 import java.util.List;
 
 
 public interface ClienteRepositorio extends JpaRepository<Cliente, Integer> {
-
-    List<Cliente> findByNomeLike(String nome);
+    @Query(value = "select * from cliente c where c.nome like '%:nome%' ", nativeQuery = true)
+    List<Cliente> encontarPorNome(@Param("nome") String nome);
 }
