@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Getter @Setter
@@ -15,6 +16,9 @@ public class Cliente {
     private Integer id;
     @Column(name = "nome")
     private String nome;
+
+    @OneToMany(mappedBy = "cliente")
+    private Set<Pedido> pedido;
 
     public Cliente(String nome) {
         this.nome = nome;
