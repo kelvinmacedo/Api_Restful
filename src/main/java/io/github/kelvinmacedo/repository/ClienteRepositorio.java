@@ -11,4 +11,6 @@ import java.util.List;
 public interface ClienteRepositorio extends JpaRepository<Cliente, Integer> {
     @Query(value = "select * from cliente c where c.nome like '%:nome%' ", nativeQuery = true)
     List<Cliente> encontarPorNome(@Param("nome") String nome);
+
+
 }
