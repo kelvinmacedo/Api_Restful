@@ -35,13 +35,5 @@ public class ItemPedido {
         this.quantidade = quantidade;
     }
 
-    @Override
-    public String toString() {
-        return "ItemPedido{" +
-                "id=" + id +
-                ", pedido=" + pedido +
-                ", produto=" + produto +
-                ", quantidade=" + quantidade +
-                '}';
-    }
+
 }

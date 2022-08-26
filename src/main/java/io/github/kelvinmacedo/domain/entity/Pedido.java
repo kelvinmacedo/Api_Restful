@@ -46,7 +46,6 @@ public class Pedido {
     public String toString() {
         return "Pedido{" +
                 "id=" + id +
-                ", cliente=" + cliente +
                 ", dataPedido=" + dataPedido +
                 ", total=" + total +
                 '}';
