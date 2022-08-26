@@ -1,5 +1,6 @@
 package io.github.kelvinmacedo.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,6 +18,7 @@ public class Cliente {
     @Column(name = "nome")
     private String nome;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "cliente")
     private Set<Pedido> pedido;
 
